@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Home Page -->
+    <div id="home" class="section active">
+      <h1>🎉 Browse Events</h1>
+      <div class="event-card" onclick="showEvent('Music Night', 'Live music concert by top artists.')">
+        <h2>Music Night</h2>
+        <p>Live music concert by top artists.</p>
+      </div>
+      <div class="event-card" onclick="showEvent('Tech Talk 2025', 'Insights into AI and future tech.')">
+        <h2>Tech Talk 2025</h2>
+        <p>Insights into AI and future tech.</p>
+      </div>
+      <div class="event-card" onclick="showEvent('Food Fiesta', 'Taste delicious cuisine from around the world.')">
+        <h2>Food Fiesta</h2>
+        <p>Taste delicious cuisine from around the world.</p>
+      </div>
+      <button onclick="goTo('dashboard')">📋 My Bookings</button>
+    </div>
+
+    <!-- Event Detail -->
+    <div id="eventDetail" class="section">
+      <h1 id="eventTitle"></h1>
+      <p id="eventDesc"></p>
+      <button onclick="bookEvent()">✅ Book Event</button>
+      <button onclick="goTo('home')">← Back to Events</button>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="section">
+      <h1>📋 My Bookings</h1>
+      <ul id="bookingList"></ul>
+      <button onclick="goTo('home')">← Back to Home</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
